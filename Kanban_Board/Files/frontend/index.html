@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban-Board</title>
+    <link rel="stylesheet" href="Styles.css">
+    
+</head>
+
+<body>
+    <div class="LoadingWindow" id="LoadingWindow">
+        <img src="./Images/loading.gif" alt="" class="ImgLoading">
+        <p>loading...</p>
+    </div>
+    <div id="MainWindow" class="hidden">
+        <div id="AddCardDialog" class="AddCardDialog box-dark hidden">
+            <label for="Column">Column</label><br>
+            <select name="Column" id="Input-Column">
+            </select><br><br>
+            <label for="">Title</label><br>
+            <textarea name="" id="Input-Title" rows="1"></textarea><br><br>
+            <label for="">Description</label><br>
+            <textarea name="" id="Input-Description" rows="10"></textarea><br>
+            <a class="Card-Title TextButton box-bright" onclick=AddCardFromDialog()>Add Card</a><br>
+            <a class="Card-Title TextButton box-bright" onclick="ToggleAddCardDialog()">Cancel</a>
+        </div>
+    </div>
+</body>
+
+<script src="functionality.js"></script>
+
+</html>

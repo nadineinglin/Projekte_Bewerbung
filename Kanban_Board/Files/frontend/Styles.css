@@ -1,0 +1,184 @@
+.debug{
+    background-color: greenyellow;
+}
+
+*   {
+        box-sizing: border-box;
+    }
+
+body{
+    align-items: center;
+    background-color: #111115;
+    color: #FFFFFFDD;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Kanban-Column{
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+.box-bright{
+    border-radius: 15px;
+    background-color: #88888888;
+    border-color: #FFFFFF88;
+    border-width: 2px;
+    border-style: solid;
+    box-shadow: 3px 10px 5px 1px #080808;
+}
+
+.box-dark{
+    background-color: #3D383F;
+    border-radius: 30px;
+    padding: 10px;
+    border-color: #888888;
+    border-width: 5px;
+    border-style: solid;
+    text-align: center;
+    box-shadow: 3px 10px 5px 1px #000;
+}
+
+.Kanban-Container{
+    height: 100%;
+}
+
+@media screen and (max-width: 1000px){
+    .Kanban-Column{
+        width: 100%;
+    }
+}
+
+.Kanban-Title{
+    font-weight: 50 0;
+    font-size: 40px;
+    user-select: none;
+}
+
+.Kanban-Card{
+    margin-top: 10px;
+    min-height: 50px;
+    transition: background-color ease-in-out 100ms;
+}
+
+.Kanban-Card:hover{
+    background-color: #888888;
+}
+
+.Card-Title{
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    white-space: pre;
+}
+
+.Card-Description{
+    margin: 10px;
+    white-space: pre;
+}
+
+.imgBase{
+    user-select: none;
+    transition: filter 200ms ease-in-out, transform 200ms ease-in-out;
+    filter: drop-shadow(0 1px 1px #111111);  
+}
+
+.ImgAddCard{
+    position: relative;
+    width: 50px;
+}
+
+.ImgAddCard:hover{
+    filter: drop-shadow(3px 10px 3px #111111);    
+    transform: translateY(-10px);
+}
+
+.ImgDelCard{
+    display: inline-block;
+    width: 20px;
+    margin-top: 5px;
+}
+
+.ImgDelCard:hover{
+    filter: drop-shadow(1px 4px 1px #111111);    
+    transform: translateY(-4px);
+}
+
+.ImgLoading{
+    width: 480px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0 0 10px #07F0FC);
+}
+
+.LeftRightButtons{
+    display: inline-block;
+    user-select: none;
+    transition: filter 200ms ease-in-out, transform 200ms ease-in-out;
+    filter: drop-shadow(0px 0px 1px #111111);  
+}
+
+.LeftRightButtons:hover{
+    filter: drop-shadow(1px 4px 1px #111111);    
+    transform: translateY(-4px);
+}
+
+.AddCardDialog{    
+    width: 90%;
+    max-width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+textarea{
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 1px;
+}
+
+input{
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.Description{
+    width: 500px;
+    height: 100px;
+    margin-bottom: 0;
+    
+}
+
+.hidden{
+    display: none;
+}
+
+.TextButton{
+    user-select: none;
+    box-shadow: revert;
+    transition: filter 100ms ease-in-out, transform 100ms ease-in-out;
+    filter: drop-shadow(0px 0px 1px #111111);
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.TextButton:hover{
+    filter: drop-shadow(2px 7px 3px #111111);
+    transform: translateY(-7px);
+}
+
+.KanbanCards{
+    min-height: 100px;
+}
+
+.LoadingWindow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+}
